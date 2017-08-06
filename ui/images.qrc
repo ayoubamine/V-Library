@@ -1,0 +1,40 @@
+<RCC>
+  <qresource prefix="interface">
+    <file>../images/book.png</file>
+    <file>../images/Plus_18px_White.png</file>
+    <file>../images/Download_16px.png</file>
+    <file>../images/Checkmark_51px.png</file>
+    <file>../images/Delete_51px.png</file>
+    <file>../images/loader.gif</file>
+    <file>../images/Close_24px.png</file>
+    <file>../images/Sort Down_16px.png</file>
+    <file>../images/Reset_16px.png</file>
+    <file>../images/Checked_16px.png</file>
+    <file>../images/About_16px.png</file>
+    <file>../images/Database_16px.png</file>
+    <file>../images/Note_16px.png</file>
+    <file>../images/Delete_16px.png</file>
+    <file>../images/Upload_16px.png</file>
+    <file>../images/Plus_18px.png</file>
+    <file>../images/About_24px.png</file>
+    <file>../images/Add File_24px.png</file>
+    <file>../images/Database_24px.png</file>
+    <file>../images/Delete File_24px.png</file>
+    <file>../images/Delete_24px.png</file>
+    <file>../images/Download_24px.png</file>
+    <file>../images/Edit File_24px.png</file>
+    <file>../images/Edit File_16px.png</file>
+    <file>../images/Grid View_24px.png</file>
+    <file>../images/Load Resume Template_24px.png</file>
+    <file>../images/News Feed_24px.png</file>
+    <file>../images/Search_24px.png</file>
+    <file>../images/Left page_24px.png</file>
+    <file>../images/Right page_24px.png</file>
+    <file>../images/Edit_16px.png</file>
+    <file>../images/Upload_24px.png</file>
+    <file>../images/View_24px.png</file>
+  </qresource>
+  <qresource prefix="logo">
+    <file>../images/logo.png</file>
+  </qresource>
+</RCC>

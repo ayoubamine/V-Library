@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>311</width>
+    <height>321</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>311</width>
+    <height>321</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>311</width>
+    <height>321</height>
+   </size>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/logo/images/logo.png</normaloff>:/logo/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*
+	QDialog
+*/
+
+QDialog#Dialog
+{
+	background-color: white
+}
+
+/*
+	QPushButton
+*/
+
+QPushButton#cancel
+{
+	border: 1px solid #f2f2f2;
+	background-color: white;
+	border-radius: 2px;
+	color: #607D8B
+}
+
+QPushButton#cancel:hover
+{
+	background-color: #f2f2f2
+}
+
+QPushButton#go
+{
+	border: 1px solid #f2f2f2;
+	background-color: #B0BEC5;
+	border-radius: 2px;
+	color: white
+}
+
+QPushButton#go:hover
+{
+	background-color: #90A4AE
+}
+
+/*
+	QListWidget
+*/
+
+QListWidget
+{
+	color:#607D8B;
+	background-color: white;
+	border-top: 0px
+}
+
+QListWidget:item
+{
+	background-color: #f2f2f2;
+	margin-bottom:1px;
+	padding:5px;
+	height: 27px;
+	border-radius: 0px
+}
+
+QListWidget:item:hover
+{
+	background-color: #ECEFF1;
+	border: 0px
+}
+
+QListWidget:item:selected
+{
+	background-color: #ECEFF1;
+	color:#607D8B
+}
+
+/*
+	QScrollBar
+*/
+
+QScrollBar:vertical
+{
+	background-color: #eceff1;
+	width: 5px;    
+	margin: 0;
+	border: 0
+}
+
+QScrollBar::handle:vertical
+{
+	background-color: #b0bec5;
+	min-height: 15px;
+	border-radius: 2px
+}
+
+QScrollBar::add-line:vertical
+{
+	height: 0px
+}
+
+QScrollBar::sub-line:vertical
+{
+	height: 0px
+}
+
+QScrollBar:horizontal
+{
+	background-color: #eceff1;
+	height: 5px;    
+	margin: 0;
+	border: 0
+}
+
+QScrollBar::handle:horizontal
+{
+	background-color: #b0bec5;
+	min-width: 15px;
+	border-radius: 2px
+}
+
+QScrollBar::add-line:horizontal
+{
+	width: 0px
+}
+
+QScrollBar::sub-line:horizontal
+{
+	width: 0px
+}</string>
+  </property>
+  <widget class="QPushButton" name="go">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>280</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Go !</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/interface/image/Upload_16px.png</normaloff>:/interface/image/Upload_16px.png</iconset>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="categories">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>291</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="isWrapping" stdset="0">
+    <bool>false</bool>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>280</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/interface/image/Delete_24px.png</normaloff>:/interface/image/Delete_24px.png</iconset>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

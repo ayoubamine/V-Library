@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>870</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>870</width>
+    <height>530</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>V-Library</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/logo/images/logo.png</normaloff>:/logo/images/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*
+	QMainWindow
+*/
+
+QMainWindow
+{
+	background-color: rgb(255, 255, 255)
+}
+
+/*
+	QListWidget
+*/
+
+QListWidget#list__categories
+{
+	color:#607D8B;
+	background-color: white;
+	border-top: 0px;
+}
+QListWidget#list__categories:item
+{
+	background-color: #ECEFF1;
+	margin-bottom:1px;
+	padding:5px;
+	height: 30px;
+	border-radius: 0px
+}
+QListWidget#list__categories:item:hover
+{
+	background-color: #f2f2f2;
+	border: 0px
+}
+QListWidget#list__categories:item:selected
+{
+	background-color: #f2f2f2;
+	color:#607D8B;
+}
+
+/*************************************/
+
+QListWidget#list__books
+{
+	border: 1px solid #f2f2f2;
+	border-left: 0;
+	border-right: 0;
+	color: #607D8B;
+	background-color: qlineargradient(spread:pad, x1:0.349, y1:0.869, x2:0.283, 		y2:0.744, stop:0 rgba(250, 250, 250, 255), stop:0.330189 rgba(250, 250, 250, 255), stop:0.334906 rgba(250, 250, 250, 255), stop:0.665094 rgba(250, 250, 250, 255), stop:0.67 rgba(244, 244, 244, 255), stop:1 rgba(244, 244, 244, 255))
+}
+
+QListWidget#list__books:item
+{
+	background-color: white;
+	border-radius: 2px;
+	margin: 8px;
+	width: 129px;
+	height: 190px
+}
+
+QListWidget#list__books:item:hover
+{
+	background-color: #f2f2f2;
+	border: 1px solid #ECEFF1
+}
+
+QListWidget#list__books:item:selected
+{
+	background-color: #f2f2f2;
+	border: 1px solid #ECEFF1;
+	color: #607D8B
+}
+
+/*
+	QFrame
+*/
+
+QFrame#sidebar
+{
+	background-color: white;
+	border: 1px solid #f2f2f2
+}
+
+QFrame#alert__form
+{
+	background-color: #4687D6;
+	border: 0
+}
+
+/*
+	QLineEdit
+*/
+
+QLineEdit#name__category,
+QLineEdit#search__line__edit
+{
+	border: 1px solid #f2f2f2;
+	color: #607D8B;
+	height: 34px;
+	padding: 0 5px
+}
+
+QLineEdit#search__line__edit
+{
+	width: 200px;
+	height: 32px
+}
+
+/*
+	QToolButton
+*/
+
+QToolButton
+{
+	background: transparent;
+	width: 30px;
+	padding: 4px;
+	border: 0
+}
+
+QToolButton:hover
+{
+	background-color: #ECEFF1;
+	border-radius: 3px
+}
+
+QToolButton#add__category,
+QToolButton#edit__category
+{
+	border: 1px solid #f2f2f2;
+	border-right: 0;
+	width: 28px;
+	height: 31px;
+	padding: 0px;
+	border-radius: 0
+}
+
+QToolButton#add__category
+{
+	border-right: 0;
+	border-left: 0
+}
+
+QToolButton#close:hover
+{
+	background-color: none
+}
+
+/*
+	QScrollBar
+*/
+
+QScrollBar:vertical
+{
+	background-color: #eceff1;
+	width: 5px;    
+	margin: 0;
+	border: 0
+}
+
+QScrollBar::handle:vertical
+{
+	background-color: #b0bec5;
+	min-height: 15px;
+	border-radius: 2px
+}
+
+QScrollBar::add-line:vertical
+{
+	height: 0px
+}
+
+QScrollBar::sub-line:vertical
+{
+	height: 0px
+}
+
+QScrollBar:horizontal
+{
+	background-color: #eceff1;
+	height: 5px;    
+	margin: 0;
+	border: 0
+}
+
+QScrollBar::handle:horizontal
+{
+	background-color: #b0bec5;
+	min-width: 15px;
+	border-radius: 2px
+}
+
+QScrollBar::add-line:horizontal
+{
+	width: 0px
+}
+
+QScrollBar::sub-line:horizontal
+{
+	width: 0px
+}
+
+/*
+	QProgressBar
+*/
+
+QProgressBar
+{
+	border-radius: 0;
+	background-color: #c0d4ea
+}
+
+QProgressBar::chunk
+{
+	background-color: #5294e2
+}
+
+/*
+	QToolTip
+*/
+
+QToolTip
+{
+	color: grey;
+	border: 0;
+	background-color: white
+}
+
+/*
+	QMain
+*/
+
+QMain
+{
+	background-color: rgb(255, 255, 255);
+}
+
+/*
+	QMenu
+*/
+
+QMenu::item
+{
+	padding: 4px 20px 4px 20px;
+}
+
+QMenu::item:selected
+{
+     background: #4c7fbf;
+	 color:white
+}
+
+/*
+	QLabel
+*/
+
+QLabel
+{
+	color: grey
+}
+
+QLabel#book__image
+{
+	border: 0px
+}
+
+QLabel#book__title
+{
+	margin-bottom: 20px
+}
+
+QLabel#book__title,
+QLabel#book__author,
+QLabel#book__category
+{
+	color: #5c616c
+}
+
+QLabel#msg
+{
+	color: white
+}
+
+/*
+	QSlider
+*/
+
+QSlider::groove:horizontal
+{
+	background: white;
+	height: 5px;
+	border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal
+{
+	background: #5294e2;
+	border: 1px solid #c9def6;
+	height: 10px;
+	border-radius: 2px;
+}
+
+QSlider::add-page:horizontal
+{
+	background: #cfd6e6;
+	border: 1px solid #f0f2f7;
+	height: 10px;
+	border-radius: 2px;
+}
+
+QSlider::handle:horizontal
+{
+	background: white;
+	border: 1px solid #cfd6e6;
+	width: 13px;
+	margin-top: -5px;
+	margin-bottom: -5px;
+	border-radius: 7px;
+}
+
+QSlider::handle:horizontal:hover
+{
+	background: #5294e2;
+	border: 1px solid #5294e2;
+}
+
+QSlider::handle:horizontal:disabled
+{
+	border: 1px solid #f0f2f7;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>8</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>0</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>8</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0,0,0,0,0,0,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>2</number>
+      </property>
+      <item>
+       <widget class="QToolButton" name="add__book">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="toolTip">
+         <string>Add</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Add File_24px.png</normaloff>:/interface/images/Add File_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="open__book">
+        <property name="toolTip">
+         <string>View</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/View_24px.png</normaloff>:/interface/images/View_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="edit__book">
+        <property name="toolTip">
+         <string>Edit</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Edit File_24px.png</normaloff>:/interface/images/Edit File_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="get__book">
+        <property name="toolTip">
+         <string>Copy book to...</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Load Resume Template_24px.png</normaloff>:/interface/images/Load Resume Template_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="delete__book">
+        <property name="toolTip">
+         <string>Delete</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Delete File_24px.png</normaloff>:/interface/images/Delete File_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="about">
+        <property name="toolTip">
+         <string>About</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/About_24px.png</normaloff>:/interface/images/About_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>285</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="search__line__edit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="dragEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="placeholderText">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="search">
+        <property name="toolTip">
+         <string>Search</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Search_24px.png</normaloff>:/interface/images/Search_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="list__mode">
+        <property name="toolTip">
+         <string>ListMode</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/News Feed_24px.png</normaloff>:/interface/images/News Feed_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="icon__mode">
+        <property name="toolTip">
+         <string>IconMode</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Grid View_24px.png</normaloff>:/interface/images/Grid View_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toggle__sidebar">
+        <property name="toolTip">
+         <string>Show Panel</string>
+        </property>
+        <property name="text">
+         <string>...</string>
+        </property>
+        <property name="icon">
+         <iconset resource="images.qrc">
+          <normaloff>:/interface/images/Left page_24px.png</normaloff>:/interface/images/Left page_24px.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>26</width>
+          <height>26</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,7">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLineEdit" name="name__category">
+            <property name="maximumSize">
+             <size>
+              <width>185</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Add new category</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="inputMask">
+             <string/>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Add new category</string>
+            </property>
+            <property name="cursorMoveStyle">
+             <enum>Qt::LogicalMoveStyle</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="add__category">
+            <property name="toolTip">
+             <string>Add</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/interface/images/Plus_18px.png</normaloff>:/interface/images/Plus_18px.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>18</width>
+              <height>18</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="edit__category">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="toolTip">
+             <string>Edit</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-right: 0</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/interface/images/Edit_16px.png</normaloff>:/interface/images/Edit_16px.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QListWidget" name="list__categories">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>22</width>
+            <height>22</height>
+           </size>
+          </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="alert__form">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>37</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="msg">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="close">
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/interface/images/Close_24px.png</normaloff>:/interface/images/Close_24px.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="progressBar">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>5</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="value">
+           <number>30</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="4,1">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QListWidget" name="list__books">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAsNeeded</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="autoScroll">
+               <bool>true</bool>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>false</bool>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>140</width>
+                <height>140</height>
+               </size>
+              </property>
+              <property name="movement">
+               <enum>QListView::Static</enum>
+              </property>
+              <property name="flow">
+               <enum>QListView::LeftToRight</enum>
+              </property>
+              <property name="resizeMode">
+               <enum>QListView::Adjust</enum>
+              </property>
+              <property name="layoutMode">
+               <enum>QListView::SinglePass</enum>
+              </property>
+              <property name="spacing">
+               <number>15</number>
+              </property>
+              <property name="viewMode">
+               <enum>QListView::IconMode</enum>
+              </property>
+              <property name="modelColumn">
+               <number>0</number>
+              </property>
+              <property name="uniformItemSizes">
+               <bool>false</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QFrame" name="sidebar">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <property name="margin">
+              <number>2</number>
+             </property>
+             <item>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <property name="margin">
+                <number>5</number>
+               </property>
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QLabel" name="book__image">
+                 <property name="maximumSize">
+                  <size>
+                   <width>151</width>
+                   <height>220</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                <number>6</number>
+               </property>
+               <item>
+                <widget class="QScrollArea" name="scrollArea">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: white;
+border: 0px;</string>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>126</width>
+                    <height>366</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,1,1,1,1,0,0,6">
+                   <property name="spacing">
+                    <number>6</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="book__title">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="book__author__lbl">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>17</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Authors:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="book__author">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_6">
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>17</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Category:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="book__category">
+                     <property name="styleSheet">
+                      <string notr="true"/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="wordWrap">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="book__pages__lbl">
+                     <property name="text">
+                      <string>Pages:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="book__pages">
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="6,2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>218</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSlider" name="slider">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="minimum">
+             <number>129</number>
+            </property>
+            <property name="maximum">
+             <number>190</number>
+            </property>
+            <property name="value">
+             <number>145</number>
+            </property>
+            <property name="tracking">
+             <bool>true</bool>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>slider</tabstop>
+  <tabstop>edit__category</tabstop>
+  <tabstop>add__category</tabstop>
+  <tabstop>name__category</tabstop>
+  <tabstop>list__categories</tabstop>
+  <tabstop>add__book</tabstop>
+  <tabstop>open__book</tabstop>
+  <tabstop>edit__book</tabstop>
+  <tabstop>delete__book</tabstop>
+  <tabstop>about</tabstop>
+  <tabstop>search__line__edit</tabstop>
+  <tabstop>search</tabstop>
+  <tabstop>list__mode</tabstop>
+  <tabstop>icon__mode</tabstop>
+  <tabstop>toggle__sidebar</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>list__books</tabstop>
+  <tabstop>get__book</tabstop>
+ </tabstops>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
