@@ -21,9 +21,9 @@ Ghostscript (32 bit): [gs-x86](https://github.com/ArtifexSoftware/ghostpdl-downl
 
 Ghostscript (64 bit): [gs-x64](https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/gs921w64.exe)
 
-ImageMagick (32 bit): [ImageMagick-x86](http://www.imagemagick.org/download/binaries/ImageMagick-6.9.9-4-Q16-x86-dll.exe)
+ImageMagick (32 bit): [ImageMagick-x86](http://www.imagemagick.org/download/binaries/ImageMagick-6.9.9-5-Q16-x86-dll.exe)
 
-ImageMagick (64 bit): [ImageMagick-x64](http://www.imagemagick.org/download/binaries/ImageMagick-6.9.9-4-Q16-x64-dll.exe)
+ImageMagick (64 bit): [ImageMagick-x64](http://www.imagemagick.org/download/binaries/ImageMagick-6.9.9-5-Q16-x64-dll.exe)
 
 Debian/Ubuntu: `sudo apt-get install libmagickwand-dev`
 
